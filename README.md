@@ -24,6 +24,14 @@ My personal belief is that the endeavor of attempting to compare financial perfo
 
 Nevertheless, if this small collection of data can provide a starting point for others investigating ways to visualize and analyze the relationship and correlation between these two data points much will have been achieved. 
 
+## AI / Large Language Model Assisted Data Retrieval
+
+Publicly available open sources providing emissions data are not as plentiful as might be hoped.  However, there is a relatively abundant supply of unstructured emissions data in the form of sustainability reports provided in document format. 
+
+To assist with the arduous process of ingesting these into a data pipeline, an AI configuration text is provided in this repository, suitable for configuration as an AI assistant, a prompting template, or even used in individual prompts.
+
+It's important to note that the configuration is written with the intended use case of a human supervisor using the LLM  assistant to offload the work of retrieving the data. The configuration text asks the LLM to provide all sources used so that the human can crosscheck or verify the accuracy of the data retrieved. . 
+
 ## A Note About Verification
 
 In order to avoid infringing upon the copyright of any organization, while it would be possible to do so, the source sustainability reports (where they have been individually analyzed) are not included in this repository. As a workaround of sorts In some cases, and purely for sharing verification of some of these data points links and screenshots of excerpts will be provided. The company list that is populated under data Ssurces is generated programmatically and therefore until they are filled, most of the documents will be empty.
