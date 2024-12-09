@@ -1,0 +1,20 @@
+| Variable                 | Description                  |
+|--------------------------|------------------------------|
+| company_name            | The name of the company referenced    |
+| stock_ticker            |  The stock market ticker of the company referenced.    |
+| exchange                | The identifier of the financial exchange upon which the company is traded. If the company has subsidiaries which are also publicly traded the exchange  and ticker of the parent company is provided (and its datapoints are taken as representing those of the larger organiserion)     |
+| sector                  |  A casual (ie, non-standardised) description of the industrial sector in which the company operates.     |
+| sics_sector             |  The four digit SICS (Standard Industrial Classification System) identifier for the company. Note: this data point was derived through large language model assistance.     |
+| ebitda_2022             |  The company's earnings before interest, tax, depreciation and amortization EBITDA year end 2022. Where possible, this is sourced from primary sources IE the company's own disclosures. Where that is not available, but 3rd party estimates have been calculated and made available, those are used instead.    |
+| ebitda_currency         |  The ISO currency identifier in which the EBITDA number is reported. This demonstration data set is standardized on the US dollar. Hence almost all values will be USD. Conversion from non US dollar currencies is conducted at the mid market rate prevailing at the 31st of December 2022. In instances where non USD currencies are named, these conversions have not yet been conducted.     |
+| ebitda_unit             |  Billion or million, the word in which the EBITDA figure is denominated.      |
+| non_usd                 |  This field is a binary operator. Currencies which are not currently USD have a value of one or positive. Currencies which are USD have a value of 0 or negative.     |
+| ebitda_source           |  A URL to the source used for the EBITDA number.     |
+| sustainability_report   | A URL to the sustainability report. Typically this will link to a PDF from which the GHG emissions figures were extracted.     |
+| headquarters_country    | The linguistic description for the country in which the company is headquartered.     |
+| iso_3166_code           |  For the purpose of assisting with geovisualisation and conversion to GeoJSON format, the country is also provided with its ISO-3166 Alpha-Two identifier consisting of a two letter identifier. .     |
+| scope_1_emissions       | The value of the company's scope one emissions standardized on millions of units of tons of carbon dioxide equivalents. Where carbon dioxide equivalents are reported in other units for example tons of CO2 equivalents the number is converted.    |
+| scope_2_emissions       | The value of the company's scope two emissions standardized on millions of units of tons of carbon dioxide equivalents. Where carbon dioxide equivalents are reported in other units for example tons of CO2 equivalents the number is converted.     |
+| scope_3_emissions       | The value of the company's scope three emissions standardized on millions of units of tons of carbon dioxide equivalents. Where carbon dioxide equivalents are reported in other units for example tons of CO2 equivalents the number is converted.     |
+| emissions_reporting_unit |  The units in which the company's emissions report is listed. In instances where a direct conversion between this reporting unit and millions of tons of carbon dioxide equivalents is not possible, this value is populated. In all other cases, including where the data was converted to millions of units of CO2 equivalents, that is reported.      |
+| notes                   |  Notes gathers about the report are listed here. In most instances, this field is populated by a simple programmatic concatenation of the different data points recorded in the data set.     |
