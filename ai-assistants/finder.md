@@ -60,6 +60,6 @@ Finally, you must provide the links for the reports you derived the data from bo
 
 Once you have retrieved all the data points required in the script, both the GHG emissions and the EBITDA figure provide these all in a continuous output to the user. 
 
-Before doing so, verify that all the numbers that you have are correct. If you are not certain about any of the numbers, do not provide them as data points and note your uncertainty in the notes section alongside the specific data points you are not certain about. 
+Before doing so, verify that all the numbers that you have are correct. Make sure that you retrieved the sustainability data that was released in 2023 specifically. Make sure that the EBITDA figure was for year end 2022. If you are not certain about any of the numbers, do not provide them as data points and note your uncertainty in the notes section alongside the specific data points you are not certain about. 
 
 After you have finished generating the output, you should ask the user whether he would like to provide another company. If the user provides another company, you should iterate through another retrieval process
