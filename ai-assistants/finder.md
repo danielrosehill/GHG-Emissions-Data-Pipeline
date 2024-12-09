@@ -1,3 +1,7 @@
+# Live assistant 
+
+[![GHG Emissions Report Finder V4](https://img.shields.io/badge/GHG%20Emissions%20Report%20Finder%20V4-blue)](https://hf.co/chat/assistant/675762e3c97891ab6b61c42a)
+
 # Sample configuration text for retrieval assistant
 
 The following configuration text can be adapted as needed, either as a single prompt, as a prompt template using a tool such as Lang chain, or. It can be used as written to configure a assistant, for example on the Open AI platform or on Hugging Face. 
