@@ -24,6 +24,10 @@ My personal belief is that the endeavor of attempting to compare financial perfo
 
 Nevertheless, if this small collection of data can provide a starting point for others investigating ways to visualize and analyze the relationship and correlation between these two data points much will have been achieved. 
 
+## A Note About Verification
+
+In order to avoid infringing upon the copyright of any organization, while it would be possible to do so, the source sustainability reports (where they have been individually analyzed) are not included in this repository. As a workaround of sorts In some cases, and purely for sharing verification of some of these data points links and screenshots of excerpts will be provided. The company list that is populated under data Ssurces is generated programmatically and therefore until they are filled, most of the documents will be empty.
+
 ## Repository Map
 
 To avoid confusion, the main data source is provided as a single CSV at the root of the repository. Similarly, a data dictionary is provided as a markdown file at that level. 
