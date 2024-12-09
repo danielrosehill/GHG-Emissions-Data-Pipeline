@@ -52,16 +52,24 @@ if os.path.exists(company_data_file):
             if not os.path.exists(company_folder):
                 os.makedirs(company_folder)
 
-            # Create record.md file if it doesn't exist
-            record_file = os.path.join(company_folder, 'record.md')
-            if not os.path.exists(record_file):
-                with open(record_file, 'w') as f:
-                    f.write(f"# Record for {company_name}\n")
+            # Create '2023' subfolder within the company folder
+            year_folder = os.path.join(company_folder, '2023')
+            if not os.path.exists(year_folder):
+                os.makedirs(year_folder)
 
-            # Create screenshots folder if it doesn't exist
-            screenshots_folder = os.path.join(company_folder, 'screenshots')
-            if not os.path.exists(screenshots_folder):
-                os.makedirs(screenshots_folder)
+            # Create 'Emissions' and 'Financials' subfolders within '2023'
+            emissions_folder = os.path.join(year_folder, 'Emissions')
+            financials_folder = os.path.join(year_folder, 'Financials')
+            if not os.path.exists(emissions_folder):
+                os.makedirs(emissions_folder)
+            if not os.path.exists(financials_folder):
+                os.makedirs(financials_folder)
+
+            # Create 'index.md' file within '2023' folder
+            index_file = os.path.join(year_folder, 'index.md')
+            if not os.path.exists(index_file):
+                with open(index_file, 'w') as f:
+                    f.write(f"# Index for {company_name} - 2023\n")
 
             # Mark company as processed
             processed_companies.add(normalized_name)

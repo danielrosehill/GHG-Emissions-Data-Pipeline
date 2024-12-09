@@ -1,1 +1,0 @@
-# Record for Amazon.com

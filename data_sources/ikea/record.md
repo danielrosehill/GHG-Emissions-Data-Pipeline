@@ -1,1 +1,0 @@
-# Record for IKEA
