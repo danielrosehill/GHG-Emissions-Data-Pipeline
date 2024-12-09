@@ -41,25 +41,25 @@ def main():
         'company_name': ['company name', 'company'],
         'llm_derived': ['llm derived', 'llm'],
         'human_verified': ['human verified','verified'],
-     'stock_ticker': ['stock ticker', 'ticker'],
+    'stock_ticker': ['stock ticker', 'ticker'],
         'exchange': ['exchange','stock exchange'],
-     'sector': ['sector', 'industry'],
-     'sics_sector': ['sics sector','sics'],
+    'sector': ['sector', 'industry'],
+    'sics_sector': ['sics sector','sics'],
         'ebitda_2022': ['ebitda 2022', 'ebitda'],
         'ebitda_currency': ['ebitda currency', 'currency'],
         'ebitda_unit': ['ebitda unit', 'unit'],
         'non_usd': ['non usd', 'non-usd'],
         'ebitda_source': ['ebitda source','source'],
-     'sustainability_report': ['sustainability report','report'],
+    'sustainability_report': ['sustainability report','report'],
         'headquarters_country': ['headquarters country', 'country'],
         'iso_3166_code': ['iso 3166 code', 'iso code'],
-     'scope_1_emissions': ['scope 1 emissions','scope 1'],
-     'scope_2_emissions': ['scope 2 emissions','scope 2'],
-     'scope_3_emissions': ['scope 3 emissions','scope 3'],
+    'scope_1_emissions': ['scope 1 emissions','scope 1'],
+    'scope_2_emissions': ['scope 2 emissions','scope 2'],
+    'scope_3_emissions': ['scope 3 emissions','scope 3'],
         'emissions_reporting_unit': ['emissions reporting unit', 'emissions unit'],
         'notes': ['notes', 'comments'],
-     'stock_live': ['stock live', 'live stock'],
-     'stock_historic': ['stock historic', 'historic stock']
+    'stock_live': ['stock live', 'live stock'],
+    'stock_historic': ['stock historic', 'historic stock']
     }
 
     # Use fuzzy logic to match column names
@@ -88,8 +88,42 @@ def main():
     # Tab 1: Display Edit Form
     with tab1:
         st.subheader("Company Data")
-        if selected_company!= "All":
-            row_index_to_edit = filtered_df.index[0]  # Assuming one row per company
+        
+        # Get the list of unique company names
+        company_names = df['company_name'].unique()
+        company_names = sorted(company_names)
+
+        # Initialize session state with the current index
+        if 'current_index' not in st.session_state:
+            st.session_state.current_index = 0
+
+        # Get the current company based on the current index
+        current_company = company_names[st.session_state.current_index]
+
+        # Create next and previous buttons
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            if st.session_state.current_index > 0:
+                previous_button = st.button("Previous")
+            else:
+                previous_button = st.button("Previous", disabled=True)
+        with col2:
+            st.write(f"Company {st.session_state.current_index + 1} of {len(company_names)}")
+        with col3:
+            if st.session_state.current_index < len(company_names) - 1:
+                next_button = st.button("Next")
+            else:
+                next_button = st.button("Next", disabled=True)
+
+        # Update the current index based on the button clicks
+        if previous_button:
+            st.session_state.current_index -= 1
+        elif next_button:
+            st.session_state.current_index += 1
+
+        # Get the row index to edit based on the current company
+        if current_company!= "All":
+            row_index_to_edit = df.loc[df['company_name'] == current_company].index[0]  # Assuming one row per company
 
             # Create a dictionary to store edited fields
             edited_row = {}
@@ -271,7 +305,6 @@ def main():
             if add_button:
                 df = pd.concat([df, pd.DataFrame([new_row])], ignore_index=True)
                 save_data(df, csv_path)
-                st.experimental_rerun()
 
 if __name__ == "__main__":
     main()
