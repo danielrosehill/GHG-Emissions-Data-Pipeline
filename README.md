@@ -36,7 +36,25 @@ While enriching the data here with live financial feeds such as those providing 
 
 - `data-dictionary.md`
 
-##  
+##  Sources
+
+For those looking for greenhouse gas emissions data which is in the public domain and available at no cost, the following sources can be recommended. 
+
+Note in addition to the limited pool of sources noted here commercial/paid offerings, providing these datapoints to subscribers, exist, for example (among others) the [Sustainalytics Carbon Emissions Dataset](https://www.sustainalytics.com/investor-solutions/esg-research/climate-solutions/carbon-emissions-data) which covers at the time of rating 6000 companies. 
+
+### NZDPU
+
+[![View Website](https://img.shields.io/badge/View%20Website-0077B5?style=flat&logo=link&logoColor=white)](https://nzdpu.com/home)
+
+The Net Zero Data Public Utility provides a centralized repository of company level GHG emissions data. Samples can be navigated and downloaded from the website and the project also provides an API. 
+
+### Open Sustainability Index
+
+[![View Website](https://img.shields.io/badge/View%20Website-0077B5?style=flat&logo=link&logoColor=white)](https://opensustainabilityindex.org)
+
+ Working in partnership with We Don't Have Time, Open Sustainability Index (OSI) provides another open source and free data set listing companies' emissions at the company level. The project also provides an API. Its website includes an AI-backed report data utility which provides automated extraction of financial and emissions parameters from uploaded document data sets. 
+
+---
 
 ### Company Emissions Data
 
