@@ -1,3 +1,49 @@
+---
+language:
+- en
+pretty_name: "GHG Emissions Data Pipeline"
+tags:
+- sustainability-data
+- emissions-data
+- ghg-reporting
+- climate-change
+- environmental-data
+license: "cc-by-4.0"
+size_categories:
+- 10K<n<100K
+dataset_creators:
+- name: Daniel Rossell
+  contact_url: https://danielrosehill.com
+---
+
+# GHG Emissions Data Pipeline
+
+## Description
+
+This repository contains a comprehensive pipeline for processing and analyzing greenhouse gas (GHG) emissions data. The pipeline integrates datasets from multiple sources, including Climate TRACE and Our World in Data, to provide insights into global emissions trends. It supports sustainability reporting, emissions tracking, and climate action planning.
+
+## Dataset Details
+
+### Sources and Methodologies
+
+The pipeline processes data from trusted sources such as Climate TRACE and Our World in Data. The data includes facility-level emissions, national inventories, and sector-specific insights. All emission factors used are compliant with the GHG Protocol.
+
+### Applications
+
+The dataset can be used for:
+- Sustainability reporting.
+- Tracking emissions by sector or geography.
+- Supporting climate action strategies.
+
+### Structure
+
+The pipeline outputs structured tabular data in CSV format, ready for analysis or visualization.
+
+## License
+
+This dataset is made available under the Creative Commons Attribution
+
+
 # GHG Emissions Data Pipeline
 
 The function of this repository is to serve as a data pipeline providing CSV data to a number of other projects on my Github repository (specifically those related to visualizing and exploring greenhouse gas emissions data, including through monetizations.) 
